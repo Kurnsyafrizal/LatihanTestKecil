@@ -75,14 +75,13 @@
                 <div class="navbar-nav ml-2">
                     <a class="nav-link nav-item active"  aria-pressed="true" href="/">{{ __('Hitung') }}</a>
                 </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('addParts') }}">{{ __('Add Parts') }}</a>
+                </div>
             </div>
         </nav>
 
         @yield('content')
-
-        {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">   
-            <span class="navbar-brand mx-auto">&copy {{ __("Syafrizal Kurniadin") }}</span>
-        </nav> --}}
     </body>
 
 

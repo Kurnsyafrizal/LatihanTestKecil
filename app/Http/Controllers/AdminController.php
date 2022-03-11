@@ -18,39 +18,63 @@ class AdminController extends Controller
         return view('edit',['parts'=>$part]);
     }
 
-    public function updateParts(Request $id,$request){
+    public function updateParts(Request $request, $id){
         $part = Part::find($id);
 
-        $ptnum = $request->validate([
+        $this->validate($request, [
             'partnumber' => 'required',
             'name' => 'required',
             'UM' => 'required'
         ]);
 
-        Part::create([
-            'partnumber'=> $ptnum->get('partnumber'),
-            'name' => $ptnum->get('name'),
-            'UM' => $ptnum->get('UM')
-        ]);
+        $part->partnumber = $request->partnumber;
+        $part->name = $request->name;
+        $part->UM = $request->UM;
 
-        return redirect()->route('edit',['parts'=>$part]);
+        $part->save();
+
+        return redirect()->route('crud')->with('status', 'Berhasil Tambah Data');
     }
 
     public function deleteParts($id){
 
         $part = DB::table('admin')->where('id',$id)->delete();
-        return view('crud',['parts'=> $part]);
+        // $part->delete();
+        return redirect()->route('crud',['parts' => $part]);
     }
 
-    
+
     public function searchParts(Request $request){
-        $part = DB::table('admin')
-                ->where('partnumber', 'LIKE', '%' . $request->cari . '%')->get();
+        // $search_partnumber = $_GET['query'];
+        $query = $request->get('query');
+        $part = Part::where('partnumber', 'LIKE', "%$query%")->get();
         
-        return view('crud',['parts' => $part]);
+        // dd($part);
+
+        return view('crud', compact('part'));
     }
+
+
 
     public function addParts(){
         return view('addPart');
+    }
+
+    public function addData(Request $request){
+        $this->validate($request, [
+            'partnumber' => 'required',
+            'name' => 'required',
+            'UM' => 'required'
+        ]);
+
+        $part = new Part();
+        $part->partnumber = $request->partnumber;
+        $part->name = $request->name;
+        $part->UM = $request->UM;
+
+        $part->save();
+
+        return redirect()->route('crud')->with('status', 'Berhasil Tambah Data');
+
     }
 }

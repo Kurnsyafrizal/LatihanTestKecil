@@ -4,14 +4,15 @@
 
 @section('content')
 
+
     <div class="container">
         <form action="">
             <div class="form-group mt-5">
-                <label for="filter" class="ml-4 h5">{{ __("Filter") }}</label>
+                <label for="filter" class=" font-weight-bold ml-4 h4">{{ __("Filter") }}</label>
             </div>
 
             <div class="form-group mt-2">
-                <label for="partnumber" class="ml-4 font-weight-bold text-md h4">{{ __("Part Number") }}</label>
+                <label for="partnumber" class="ml-4 font-weight-bold text-md h3">{{ __("Part Number") }}</label>
                 <div class="col-md-12">
                     <input type="search" class="form-control ml-1" id="cari" name="cari" placeholder="Isi dengan part number">
                 </div>
@@ -23,10 +24,7 @@
         </form>
 
         {{-- Table --}}
-
-
-
-        <table class="table">
+        <table class="table mb-10">
             <thead>
                 <tr>
                   <th scope="col">Action</th>

@@ -26,7 +26,9 @@ Route::get('/perhitungan/reset',[\App\Http\Controllers\HitungController::class, 
 
 //CRUD
 Route::get('/crud',[\App\Http\Controllers\AdminController::class, 'index'])->name('crud');
-Route::get('/crud/search',[\App\Http\Controllers\AdminController::class, 'index']);
+
+//search
+Route::get('/crud/search',[\App\Http\Controllers\AdminController::class, 'searchParts']);
 
 //Edit
 Route::get('/edit/{id}',[\App\Http\Controllers\AdminController::class, 'editParts'])->name('edit');
@@ -37,3 +39,4 @@ Route::delete('/detele/{id}', [\App\Http\Controllers\AdminController::class, 'de
 
 //Add Data
 Route::get('addPart',  [\App\Http\Controllers\AdminController::class, 'addParts'])->name('addParts');
+Route::post('/addPart',  [\App\Http\Controllers\AdminController::class, 'addData'])->name('addData');
