@@ -1,12 +1,10 @@
 @extends('layout.layouts')
-@section('title', 'CRUD')
+@section('title', 'Search')
 
 
 @section('content')
-
-
     <div class="container">
-        <form action="">
+        <form action=" ">
             <div class="form-group mt-5">
                 <label for="filter" class=" font-weight-bold ml-4 h4">{{ __("Filter") }}</label>
             </div>
@@ -14,7 +12,7 @@
             <div class="form-group mt-2">
                 <label for="partnumber" class="ml-4 font-weight-bold text-md h3">{{ __("Part Number") }}</label>
                 <div class="col-md-12">
-                    <input type="search" class="form-control ml-1" id="query" name="query" placeholder="Isi dengan part number">
+                    <input type="search" class="form-control ml-1" id="cari" name="cari" placeholder="Isi dengan part number">
                 </div>
             </div>
 

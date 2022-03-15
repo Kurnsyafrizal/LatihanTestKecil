@@ -49,9 +49,7 @@ class AdminController extends Controller
         $query = $request->get('query');
         $part = Part::where('partnumber', 'LIKE', "%$query%")->get();
         
-        // dd($part);
-
-        return view('crud', compact('part'));
+        return view('search', ['part' => $part]);
     }
 
 
