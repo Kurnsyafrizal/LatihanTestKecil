@@ -47,9 +47,9 @@ class AdminController extends Controller
     public function searchParts(Request $request){
         // $search_partnumber = $_GET['query'];
         $query = $request->get('query');
-        $part = Part::where('partnumber', 'LIKE', "%$query%")->get();
+        $part = DB::table('admin')->where('partnumber', 'LIKE', "%".$query."%")->get();
         
-        return view('search', ['part' => $part]);
+        return view('search', ['parts' => $part]);
     }
 
 

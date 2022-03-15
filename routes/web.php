@@ -28,7 +28,7 @@ Route::get('/perhitungan/reset',[\App\Http\Controllers\HitungController::class, 
 Route::get('/crud',[\App\Http\Controllers\AdminController::class, 'index'])->name('crud');
 
 //search
-Route::get('/search',[\App\Http\Controllers\AdminController::class, 'searchParts']);
+Route::get('/search',[\App\Http\Controllers\AdminController::class, 'searchParts'])->name('searchPart');
 
 //Edit
 Route::get('/edit/{id}',[\App\Http\Controllers\AdminController::class, 'editParts'])->name('edit');

@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container">
-        <form action=" ">
+        <form action="{{ route('searchPart') }} ">
             <div class="form-group mt-5">
                 <label for="filter" class=" font-weight-bold ml-4 h4">{{ __("Filter") }}</label>
             </div>
@@ -12,7 +12,7 @@
             <div class="form-group mt-2">
                 <label for="partnumber" class="ml-4 font-weight-bold text-md h3">{{ __("Part Number") }}</label>
                 <div class="col-md-12">
-                    <input type="search" class="form-control ml-1" id="cari" name="cari" placeholder="Isi dengan part number">
+                    <input type="search" class="form-control ml-1" id="query" name="query" placeholder="Isi dengan part number">
                 </div>
             </div>
 
@@ -32,7 +32,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($parts as $part)
+                @forelse ($parts as $part)
                     <tr>
                         <td>
                             <div class="flex">
@@ -49,7 +49,12 @@
                         <td>{{ $part->name }}</td>
                         <td>{{ $part->UM }}</td>
                     </tr>
-                @endforeach
+                @empty
+                    <tr>
+                        <td>{{ __('Data Tidak Ditemukan') }}</td>
+                    </tr>
+                @endforelse 
+               
             </tbody>
         </table>
     </div>  
