@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\AdminExport;
+use App\Imports\AdminImport;
+use Maatwebsite\Excel\Facades\Excel;
+
 use App\Part;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -73,6 +77,24 @@ class AdminController extends Controller
         $part->save();
 
         return redirect()->route('crud')->with('status', 'Berhasil Tambah Data');
+
+    }
+
+
+    public function adminExport(){
+        return Excel::download(new AdminExport, 'admin.xlsx');
+    }
+
+    public function adminImport(Request $request){
+        $file = $request->file('file');
+
+        $namaFile = rand().$file->getClientOriginalName();
+
+        $file->move('file', $namaFile);
+
+        Excel::import(new AdminImport, public_path('/file/'.$namaFile));
+    
+        return redirect('/crud');
 
     }
 }

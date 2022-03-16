@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -40,3 +41,7 @@ Route::delete('/detele/{id}', [\App\Http\Controllers\AdminController::class, 'de
 //Add Data
 Route::get('addPart',  [\App\Http\Controllers\AdminController::class, 'addParts'])->name('addParts');
 Route::post('/addPart',  [\App\Http\Controllers\AdminController::class, 'addData'])->name('addData');
+
+//Export & Import
+Route::get('/exportAdmin',[\App\Http\Controllers\AdminController::class, 'adminExport'])->name('adminexport');
+Route::post('/importAdmin', 'AdminController@adminImport');
