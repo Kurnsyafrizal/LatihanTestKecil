@@ -31,7 +31,7 @@
             <div class="card-header">
                 <a href="{{ route('adminexport') }}" class="btn btn-success">{{  __('Export Data')  }}</a>
                 <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#importExcel">{{ __('Import Data') }}</a>
-                <a href="#" class="btn btn-danger">{{  __('Export PDF')  }}</a>
+                <a href="{{ route('exportPDF') }}" class="btn btn-danger">{{  __('Export PDF')  }}</a>
             </div>
 
             <div class="card-body">

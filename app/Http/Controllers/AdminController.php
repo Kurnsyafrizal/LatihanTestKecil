@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Exports\AdminExport;
 use App\Imports\AdminImport;
+use Dompdf\Dompdf;
+use \PDF;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Part;
@@ -86,15 +88,20 @@ class AdminController extends Controller
     }
 
     public function importExcel(Request $request){
-
         $ExcelImport = new AdminImport;
-        
-        // dd($ExcelImport);
-
         Excel::import($ExcelImport, $request->file('file'));
-        
 
         return redirect('/crud');
 
+    }
+
+
+    public function exportPDF(){
+        $data = Part::all();
+        view()->share('data',$data);
+        
+        $pdf = PDF::loadview('exportPDF');
+
+        return $pdf->donwload('admin.pdf');
     }
 }
