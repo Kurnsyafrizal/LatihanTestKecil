@@ -14,10 +14,13 @@ class AdminImport implements ToModel
     */
     public function model(array $row)
     {
+        // dd($row);
+        
         return new Part([
             'partnumber' => $row[1],
             'name' => $row[2],
             'UM' => $row[3]
         ]);
     }
+
 }

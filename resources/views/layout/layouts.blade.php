@@ -79,6 +79,41 @@
                     <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('addParts') }}">{{ __('Add Parts') }}</a>
                 </div>
             </div>
+
+            
+            <ul class="nav justify-content-end">
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('1') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('2') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('3') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('4') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('5') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('6') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('7') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('8') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('9') }}</a>
+                </div>
+                <div class="navbar-nav ml-2">
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('10') }}</a>
+                </div>
+            </div>
+            </ul>
         </nav>
 
         @yield('content')

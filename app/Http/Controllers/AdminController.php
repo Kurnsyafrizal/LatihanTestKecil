@@ -85,15 +85,15 @@ class AdminController extends Controller
         return Excel::download(new AdminExport, 'admin.xlsx');
     }
 
-    public function adminImport(Request $request){
-        $file = $request->file('file');
+    public function importExcel(Request $request){
 
-        $namaFile = rand().$file->getClientOriginalName();
+        $ExcelImport = new AdminImport;
+        
+        // dd($ExcelImport);
 
-        $file->move('file', $namaFile);
+        Excel::import($ExcelImport, $request->file('file'));
+        
 
-        Excel::import(new AdminImport, public_path('/file/'.$namaFile));
-    
         return redirect('/crud');
 
     }

@@ -44,4 +44,4 @@ Route::post('/addPart',  [\App\Http\Controllers\AdminController::class, 'addData
 
 //Export & Import
 Route::get('/exportAdmin',[\App\Http\Controllers\AdminController::class, 'adminExport'])->name('adminexport');
-Route::post('/importAdmin', 'AdminController@adminImport');
+Route::post('/importAdmin', [\App\Http\Controllers\AdminController::class, 'importExcel'])->name('importExcel');
