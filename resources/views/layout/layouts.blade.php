@@ -83,7 +83,7 @@
             
             <ul class="nav justify-content-end">
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('1') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalSatu') }}">{{ __('1') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
                     <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('2') }}</a>

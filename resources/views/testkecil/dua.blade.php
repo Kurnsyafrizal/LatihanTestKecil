@@ -33,21 +33,6 @@
                             </div>
                         </div>
 
-                        {{-- <div class="form-group mt-2">
-                            <label for="exampleFormControlSelect1" class="ml-4 font-weight-bold text-md h4">{{ __("Hitung Abjad Dalam Kalimat") }}</label>
-                            <div class="col-md-12">
-                                <select name="abjad" class="form-control" id="abjad">
-                                    @foreach (range('A','Z') as $i)
-                                        @if ($i == $abjad)
-                                            <option value="{{ $i }}" selected > {{ $i }} </option> 
-                                        @else
-                                            <option value="{{ $i }}" > {{ $i }} </option> 
-                                        @endif
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div> --}}
-
 
                         <div class="form-group mt-2">
                             <label for="name" class="ml-4 font-weight-bold text-md h4">{{ __("Hasil Hitung Abjad") }}</label>
@@ -63,7 +48,7 @@
                         </div>   
 
                         <div class="form-group mt-4 ">
-                            <button type="submit" class="btn btn-primary btn-lg ml-4 float-right">{{ __("Jalankan") }}</button>
+                            <button type="submit" class="btn btn-primary btn-lg ml-4">{{ __("Validasi") }}</button>
                         </div>
                 </form>     
             </div>

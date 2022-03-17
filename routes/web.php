@@ -48,12 +48,8 @@ Route::post('/importAdmin', [\App\Http\Controllers\AdminController::class, 'impo
 
 Route::get('/exportPDF', [\App\Http\Controllers\AdminController::class, 'exportPDF'])->name('exportPDF');
 
+// Test Kecil
+Route::get('/satu',[\App\Http\Controllers\SatuController::class, 'index'])->name('HalSatu');
+Route::post('/satu',[\App\Http\Controllers\SatuController::class, 'HitungSatu']);
 
-Route::group([
-    'prefix' =>'testkecil',
-    'as' => 'tk'
-],function (){
-    Route::get('/satu',[\App\Http\Controllers\AdminController::class, 'exportPDF']);
-
-}
-); 
+Route::get('/dua');
