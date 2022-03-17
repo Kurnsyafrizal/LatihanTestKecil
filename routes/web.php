@@ -47,3 +47,13 @@ Route::get('/exportAdmin',[\App\Http\Controllers\AdminController::class, 'adminE
 Route::post('/importAdmin', [\App\Http\Controllers\AdminController::class, 'importExcel'])->name('importExcel');
 
 Route::get('/exportPDF', [\App\Http\Controllers\AdminController::class, 'exportPDF'])->name('exportPDF');
+
+
+Route::group([
+    'prefix' =>'testkecil',
+    'as' => 'tk'
+],function (){
+    Route::get('/satu',[\App\Http\Controllers\AdminController::class, 'exportPDF']);
+
+}
+); 
