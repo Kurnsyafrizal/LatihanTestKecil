@@ -86,7 +86,7 @@
                     <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalSatu') }}">{{ __('1') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('2') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalDua') }}">{{ __('2') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
                     <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('3') }}</a>

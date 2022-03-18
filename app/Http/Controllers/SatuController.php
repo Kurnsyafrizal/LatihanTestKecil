@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 class SatuController extends Controller
 {
     public function index (){
-        return view('testkecil.satu');
+        $kalimat = '';
+        $abjad = '';
+        $hasil = '';
+
+        return view('testkecil.satu', ['kalimat' => $kalimat, 'abjad' => $abjad, 'hasil' => $hasil]);
     }
 
     public function HitungSatu(Request $request){
-
-        // $kalimat= $request->get('kalimat');
-        // $abjad = $request->get('abjad');
        
         $kalimat = strtoupper(request()->input('kalimat'));
         $abjad = strtoupper(request()->input('abjad'));

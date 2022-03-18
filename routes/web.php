@@ -52,4 +52,21 @@ Route::get('/exportPDF', [\App\Http\Controllers\AdminController::class, 'exportP
 Route::get('/satu',[\App\Http\Controllers\SatuController::class, 'index'])->name('HalSatu');
 Route::post('/satu',[\App\Http\Controllers\SatuController::class, 'HitungSatu']);
 
-Route::get('/dua');
+Route::get('/dua', [\App\Http\Controllers\DuaController::class, 'index'])->name('HalDua');
+// Route::post('/dua', [\App\Http\Controllers\DuaController::class, 'validasiTanggal']);
+
+Route::get('/tiga', [\App\Http\Controllers\TigaController::class, 'index'])->name('HalTiga');
+
+Route::get('/empat', [\App\Http\Controllers\EmpatController::class, 'index'])->name('HalEmpat');
+
+Route::get('/lima', [\App\Http\Controllers\LimaController::class, 'index'])->name('HalLima');
+
+Route::get('/enam', [\App\Http\Controllers\EnamController::class, 'index'])->name('HalEnam');
+
+Route::get('/tujuh', [\App\Http\Controllers\TujuhController::class, 'index'])->name('HalTujuh');
+
+Route::get('/delapan', [\App\Http\Controllers\DelapanController::class, 'index'])->name('HalDelapan');
+
+Route::get('/sembilan', [\App\Http\Controllers\SembilanController::class, 'index'])->name('HalSembilan');
+
+Route::get('/sepuluh', [\App\Http\Controllers\SepuluhController::class, 'index'])->name('HalSepuluh');

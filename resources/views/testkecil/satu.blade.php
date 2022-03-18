@@ -19,21 +19,10 @@
                                 <div class="col-md-12">
                                     <input type="text" class="form-control ml-1" id="kalimat" name="kalimat" value="{{ $kalimat }} "placeholder="Masukan Kalimat">
                                 </div>
-                            @else
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control ml-1" id="kalimat" name="kalimat" placeholder="Masukan Kalimat">
-                                </div>
                             @endif
                         </div>
 
-                        <div class="dropdown mt-2">
-                            <label for="name" class="ml-4 font-weight-bold text-md h4">{{ __("Hitung Abjad Dalam Kalimat") }}</label>
-                            <div class="col-md-12">
-                                <input type="text" class="form-control ml-1" id="abjad" name="abjad" placeholder="Masukan abjad">
-                            </div>
-                        </div>
-
-                        {{-- <div class="form-group mt-2">
+                        <div class="form-group mt-2">
                             <label for="exampleFormControlSelect1" class="ml-4 font-weight-bold text-md h4">{{ __("Hitung Abjad Dalam Kalimat") }}</label>
                             <div class="col-md-12">
                                 <select name="abjad" class="form-control" id="abjad">
@@ -46,18 +35,14 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div> --}}
+                        </div>
 
 
                         <div class="form-group mt-2">
                             <label for="name" class="ml-4 font-weight-bold text-md h4">{{ __("Hasil Hitung Abjad") }}</label>
                             @if (isset($hasil))
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control " id="hasil" name="hasil" value="{{ $hasil }}">
-                                </div>
-                            @else
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control ml-1" id="hasil" name="hasil" placeholder="Hasil Perhitungan">
+                                    <input type="text" class="form-control " id="hasil" name="hasil" value="{{ $hasil }}" disabled>
                                 </div>
                             @endif
                         </div>   
