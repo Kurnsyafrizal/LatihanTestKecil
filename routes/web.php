@@ -53,20 +53,26 @@ Route::get('/satu',[\App\Http\Controllers\SatuController::class, 'index'])->name
 Route::post('/satu',[\App\Http\Controllers\SatuController::class, 'HitungSatu']);
 
 Route::get('/dua', [\App\Http\Controllers\DuaController::class, 'index'])->name('HalDua');
-// Route::post('/dua', [\App\Http\Controllers\DuaController::class, 'validasiTanggal']);
+Route::post('/dua', [\App\Http\Controllers\DuaController::class, 'validasiTanggal']);
 
 Route::get('/tiga', [\App\Http\Controllers\TigaController::class, 'index'])->name('HalTiga');
+Route::post('/tiga', [\App\Http\Controllers\TigaController::class, 'HitungTiga']);
 
 Route::get('/empat', [\App\Http\Controllers\EmpatController::class, 'index'])->name('HalEmpat');
 
 Route::get('/lima', [\App\Http\Controllers\LimaController::class, 'index'])->name('HalLima');
+Route::post('/lima', [\App\Http\Controllers\LimaController::class, 'Fibonnaci']);
 
 Route::get('/enam', [\App\Http\Controllers\EnamController::class, 'index'])->name('HalEnam');
+Route::post('/enam', [\App\Http\Controllers\EnamController::class, 'DeretAngka']);
 
 Route::get('/tujuh', [\App\Http\Controllers\TujuhController::class, 'index'])->name('HalTujuh');
 
 Route::get('/delapan', [\App\Http\Controllers\DelapanController::class, 'index'])->name('HalDelapan');
+Route::post('/delapan', [\App\Http\Controllers\DelapanController::class, 'bintang_req']);//belum keluar hasilnya
 
 Route::get('/sembilan', [\App\Http\Controllers\SembilanController::class, 'index'])->name('HalSembilan');
+Route::post('/sembilan', [\App\Http\Controllers\SembilanController::class, 'separtor']);
+
 
 Route::get('/sepuluh', [\App\Http\Controllers\SepuluhController::class, 'index'])->name('HalSepuluh');

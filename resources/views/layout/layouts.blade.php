@@ -89,28 +89,28 @@
                     <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalDua') }}">{{ __('2') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('3') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalTiga') }}">{{ __('3') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('4') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalEmpat') }}">{{ __('4') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('5') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalLima') }}">{{ __('5') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('6') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalEnam') }}">{{ __('6') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('7') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalTujuh') }}">{{ __('7') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('8') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalDelapan') }}">{{ __('8') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('9') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalSembilan') }}">{{ __('9') }}</a>
                 </div>
                 <div class="navbar-nav ml-2">
-                    <a class="nav-link nav-item active"  aria-pressed="true" href="#">{{ __('10') }}</a>
+                    <a class="nav-link nav-item active"  aria-pressed="true" href="{{ route('HalSepuluh') }}">{{ __('10') }}</a>
                 </div>
             </div>
             </ul>

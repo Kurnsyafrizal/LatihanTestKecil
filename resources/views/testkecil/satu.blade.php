@@ -19,6 +19,10 @@
                                 <div class="col-md-12">
                                     <input type="text" class="form-control ml-1" id="kalimat" name="kalimat" value="{{ $kalimat }} "placeholder="Masukan Kalimat">
                                 </div>
+                            @else
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control ml-1" id="kalimat" name="kalimat" placeholder="Masukan Kalimat">
+                                </div>
                             @endif
                         </div>
 
@@ -43,6 +47,10 @@
                             @if (isset($hasil))
                                 <div class="col-md-12">
                                     <input type="text" class="form-control " id="hasil" name="hasil" value="{{ $hasil }}" disabled>
+                                </div>
+                            @else
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control " id="hasil" name="hasil" disabled>
                                 </div>
                             @endif
                         </div>   

@@ -43,7 +43,7 @@
 
                         <div class="form-group mt-2">
                             <label for="tahun" class="ml-4 font-weight-bold text-md h4">{{ __("Tahun") }}</label>
-                            @if(isset($bulan))    
+                            @if(isset($tahun))    
                                 <div class="col-md-12">
                                     <input type="text" class="form-control ml-1" id="tahun" name="tahun" value="{{ $tahun }}" placeholder="Masukan tahun">
                                 </div>  
