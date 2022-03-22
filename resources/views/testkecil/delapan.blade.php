@@ -17,7 +17,7 @@
                             <label for="angka" class="ml-4 font-weight-bold text-md h4">{{ __("Angka") }}</label>
                             @if(isset($regAngka))
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control ml-1" id="angka" name="angka" value="{{ old('angka') ?? ($regAngka ?? '') }}" placeholder="Masukan angka">
+                                    <input type="text" class="form-control ml-1" id="angka" name="angka" value="{{ old('angka') ?? ($angka ?? '') }}" placeholder="Masukan angka">
                                 </div>
                             @else   
                                 <div class="col-md-12">

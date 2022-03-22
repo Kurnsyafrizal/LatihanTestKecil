@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 class DelapanController extends Controller
 {
     public function index (){
-
         return view('testkecil.delapan');
         
     }
@@ -16,71 +15,87 @@ class DelapanController extends Controller
     public function bintang_req(Request $request){
 
         $request->validate([
-            'angka' => 'required|numeric'
+            'angka' => 'numeric|integer|required'
         ]);
 
         $angka = "";
+        $tempAngka = $request->angka;
+
+        // Segitiga 1
+        $i= 0;
+        while($i < $tempAngka){
+            $j=0;
+            while($j <= $i){
+                $angka = $angka . "*";
+                $j++;
+            }
+            $angka = $angka . "\n";
+            $i++;
+        }
+
+        $angka = $angka . "\n";
+
+        // Segitiga 2
+        $i= $tempAngka -1;
+        while($i >=0){
+            $j=0;
+            while($j < $tempAngka){
+                if($j >= $i){
+                    $angka = $angka . "*";
+                }else{
+                    $angka = $angka . " ";
+                }   
+                
+                $j++;
+            }
+            $angka = $angka . "\n";
+            $i--;
+        }
+
+        $angka = $angka . "\n";
+ 
+        // Segitiga 3
+        $i= $tempAngka -1;
+        while($i >=0){
+            $j=0;
+            while($j < $tempAngka){
+                if($j <= $i){
+                    $angka = $angka . "*";
+                }else{
+                    $angka = $angka . " ";
+                }   
+                
+                $j++;
+            }
+            $angka = $angka . "\n";
+            $i--;
+        }
+
+        $angka = $angka . "\n";
+
+        // Segitiga 4
+        $i= 0;
+        while($i < $tempAngka){
+            $j=0;
+            while($j < $tempAngka){
+                if($j >= $i){
+                    $angka = $angka . "*";
+                }else{
+                    $angka = $angka . " ";
+                }   
+                
+                $j++;
+            }
+            $angka = $angka . "\n";
+            $i++;
+        }
+
+        $angka = $angka . "\n";
         
-        $regAngka = request()->input('angka');
-
-        // Segitiga Pertama
-
-        for ($i = 1; $i <= $regAngka; $i++) {
-            for ($j = 1; $j <= $i; $j++) {
-                 $angka = $angka . "*";
-            }
-            $angka = $angka . "\n";
-        }
-        $angka = $angka . "\n";
-
-
-        //Kedua
-        for ($i = $regAngka - 1; $i >= 0; $i--) {
-            for ($j = 0; $j < $regAngka; $j++) {
-                if ($j >= $i) {
-                    $angka = $angka . "*";
-                } else {
-                    $angka = $angka . " ";
-                }
-            }
-            $angka = $angka . "\n";
-        }
-        $angka = $angka . "\n";
-
-
-        //Ketiga
-        for ($i = $regAngka - 1; $i >= 0; $i--) {
-            for ($j = 0; $j < $regAngka; $j++) {
-                if ($j <= $i) {
-                    $angka = $angka . "*";
-                } else {
-                    $angka = $angka . " ";
-                }
-            }
-            $angka = $angka . "\n";
-        }
-        $angka = $angka . "\n";
-
-        //Keempat
-        for ($i = 0; $i < $regAngka; $i++) {
-            for ($j = 0; $j < $regAngka; $j++) {
-                if ($j >= $i) {
-                    $angka = $angka . "*";
-                } else {
-                    $angka = $angka . " ";
-                }
-            }
-            $angka = $angka . "\n";
-        }
-        $angka = $angka . "\n";
-
-        
-
-        $result = array([
-            'angka' =>$regAngka,
-            'hasil'=> $angka
+        return view('testkecil.delapan',[
+            'angka' => $tempAngka,
+            'hasil' => $angka,
         ]);
-
-        return view('testkecil.delapan')->with($result);
     }
+    
 }

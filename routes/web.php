@@ -59,6 +59,7 @@ Route::get('/tiga', [\App\Http\Controllers\TigaController::class, 'index'])->nam
 Route::post('/tiga', [\App\Http\Controllers\TigaController::class, 'HitungTiga']);
 
 Route::get('/empat', [\App\Http\Controllers\EmpatController::class, 'index'])->name('HalEmpat');
+Route::post('/empat', [\App\Http\Controllers\EmpatController::class, 'Soal4']);
 
 Route::get('/lima', [\App\Http\Controllers\LimaController::class, 'index'])->name('HalLima');
 Route::post('/lima', [\App\Http\Controllers\LimaController::class, 'Fibonnaci']);
@@ -67,6 +68,7 @@ Route::get('/enam', [\App\Http\Controllers\EnamController::class, 'index'])->nam
 Route::post('/enam', [\App\Http\Controllers\EnamController::class, 'DeretAngka']);
 
 Route::get('/tujuh', [\App\Http\Controllers\TujuhController::class, 'index'])->name('HalTujuh');
+Route::post('/tujuh', [\App\Http\Controllers\TujuhController::class, 'convertIteration']);
 
 Route::get('/delapan', [\App\Http\Controllers\DelapanController::class, 'index'])->name('HalDelapan');
 Route::post('/delapan', [\App\Http\Controllers\DelapanController::class, 'bintang_req']);//belum keluar hasilnya
@@ -76,3 +78,4 @@ Route::post('/sembilan', [\App\Http\Controllers\SembilanController::class, 'sepa
 
 
 Route::get('/sepuluh', [\App\Http\Controllers\SepuluhController::class, 'index'])->name('HalSepuluh');
+Route::post('/sepuluh', [\App\Http\Controllers\SepuluhController::class, 'HitungJam']);
