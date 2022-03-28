@@ -46,7 +46,10 @@ Route::post('/addPart',  [\App\Http\Controllers\AdminController::class, 'addData
 Route::get('/exportAdmin',[\App\Http\Controllers\AdminController::class, 'adminExport'])->name('adminexport');
 Route::post('/importAdmin', [\App\Http\Controllers\AdminController::class, 'importExcel'])->name('importExcel');
 
-Route::get('/exportPDF', [\App\Http\Controllers\AdminController::class, 'exportPDF'])->name('exportPDF');
+Route::get('/exportPDF', [\App\Http\Controllers\AdminController::class, 'exportPDF'])->name('export');
+
+
+
 
 // Test Kecil
 Route::get('/satu',[\App\Http\Controllers\SatuController::class, 'index'])->name('HalSatu');
@@ -71,7 +74,7 @@ Route::get('/tujuh', [\App\Http\Controllers\TujuhController::class, 'index'])->n
 Route::post('/tujuh', [\App\Http\Controllers\TujuhController::class, 'convertIteration']);
 
 Route::get('/delapan', [\App\Http\Controllers\DelapanController::class, 'index'])->name('HalDelapan');
-Route::post('/delapan', [\App\Http\Controllers\DelapanController::class, 'bintang_req']);//belum keluar hasilnya
+Route::post('/delapan', [\App\Http\Controllers\DelapanController::class, 'bintang_req']);
 
 Route::get('/sembilan', [\App\Http\Controllers\SembilanController::class, 'index'])->name('HalSembilan');
 Route::post('/sembilan', [\App\Http\Controllers\SembilanController::class, 'separtor']);

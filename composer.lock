@@ -4,8 +4,74 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93664c9cb857ccee9ca7a76f7999ff73",
+    "content-hash": "0ecd0ae4d858754d6c22ef85fcfbfc6e",
     "packages": [
+        {
+            "name": "barryvdh/laravel-dompdf",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-dompdf.git",
+                "reference": "5b99e1f94157d74e450f4c97e8444fcaffa2144b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-dompdf/zipball/5b99e1f94157d74e450f4c97e8444fcaffa2144b",
+                "reference": "5b99e1f94157d74e450f4c97e8444fcaffa2144b",
+                "shasum": ""
+            },
+            "require": {
+                "dompdf/dompdf": "^1",
+                "illuminate/support": "^5.5|^6|^7|^8",
+                "php": "^7.1 || ^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\DomPDF\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "PDF": "Barryvdh\\DomPDF\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\DomPDF\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "A DOMPDF Wrapper for Laravel",
+            "keywords": [
+                "dompdf",
+                "laravel",
+                "pdf"
+            ],
+            "support": {
+                "issues": "https://github.com/barryvdh/laravel-dompdf/issues",
+                "source": "https://github.com/barryvdh/laravel-dompdf/tree/v0.9.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/barryvdh",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-27T12:05:53+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
@@ -217,16 +283,16 @@
         },
         {
             "name": "dompdf/dompdf",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/dompdf.git",
-                "reference": "60b704331479a69e9bcdb3496da2315b5c4f94fd"
+                "reference": "c6dfd9bb8b0040609f04754f729d4cb3016e0575"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/60b704331479a69e9bcdb3496da2315b5c4f94fd",
-                "reference": "60b704331479a69e9bcdb3496da2315b5c4f94fd",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/c6dfd9bb8b0040609f04754f729d4cb3016e0575",
+                "reference": "c6dfd9bb8b0040609f04754f729d4cb3016e0575",
                 "shasum": ""
             },
             "require": {
@@ -278,9 +344,9 @@
             "homepage": "https://github.com/dompdf/dompdf",
             "support": {
                 "issues": "https://github.com/dompdf/dompdf/issues",
-                "source": "https://github.com/dompdf/dompdf/tree/v1.2.0"
+                "source": "https://github.com/dompdf/dompdf/tree/v1.2.1"
             },
-            "time": "2022-02-07T13:02:10+00:00"
+            "time": "2022-03-24T12:57:42+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\AdminExport;
 use App\Imports\AdminImport;
 use Dompdf\Dompdf;
-use \PDF;
+use PDF;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Part;
@@ -98,10 +98,8 @@ class AdminController extends Controller
 
     public function exportPDF(){
         $data = Part::all();
-        view()->share('data',$data);
-        
-        $pdf = PDF::loadview('exportPDF');
+        $pdf = PDF::loadview('export_pdf',$data);
 
-        return $pdf->donwload('admin.pdf');
+        return $pdf->download('admin.pdf');
     }
 }
